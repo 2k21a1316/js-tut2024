@@ -53,3 +53,31 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+//*********************memory**********************
+// stack (primitive) copy of the variable declared  heap (non primitive) reference of the variable
+// stakc changes not in original value
+// heap change in the original value 
+let myyoutubename="vishalkumar"
+let another=myyoutubename
+another="kumar"
+
+console.log(myyoutubename);
+console.log(another);
+
+let userone={
+    email:"user@google.com",
+    upi:"user@ybl"
+}
+// object{
+//     email:"user@google.com",
+//     upi:"user@ybl"
+// }
+let usertwo=userone
+usertwo.email="vishal@gmail.com"
+usertwo.upi="sbi@ybl"
+console.log(userone.email)
+console.log(usertwo.email)
+
+
