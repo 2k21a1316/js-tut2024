@@ -83,7 +83,7 @@ one()
 two()
 three()
 
-execute all these code in browser source and see working of call stack and execution of code by making checkpoint on line   
+// execute all these code in browser source and see working of call stack and execution of code by making checkpoint on line   
 console.log("two")
 console.log("one")
 console.log("three")
