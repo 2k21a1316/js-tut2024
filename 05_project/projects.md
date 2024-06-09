@@ -84,11 +84,12 @@ const clock = document.getElementById('clock');
 // const clock = document.querySelector('#clock')
 
 setInterval(function () {
+  //this method runs each second
   let date = new Date();
   // console.log(date.toLocaleTimeString());
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
-
+//1000 for each 1 second
 
 ```
 
