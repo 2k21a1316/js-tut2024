@@ -17,6 +17,7 @@ buttons.forEach(function (button) {
   button.addEventListener('click', function (e) {
     console.log(e);
     console.log(e.target);
+    // event is basically object
     if (e.target.id === 'grey') {
       body.style.backgroundColor = e.target.id;
     }
@@ -42,7 +43,7 @@ buttons.forEach(function (button) {
 const form = document.querySelector('form');
 // this usecase will give you empty
 // const height = parseInt(document.querySelector('#height').value)
-
+//form submit by get or post on url or server respectively
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
