@@ -97,7 +97,7 @@ setInterval(function () {
 
 
 ```javascript
-
+//<input type="submit" can also be a button
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
 const submit = document.querySelector('#subt');
@@ -116,7 +116,7 @@ let playGame = true;
 
 if (playGame) {
   submit.addEventListener('click', function (e) {
-    e.preventDefault();
+    e.preventDefault();//prevent default operation of eventlistner
     const guess = parseInt(userInput.value);
     console.log(guess);
     validateGuess(guess);
@@ -155,6 +155,7 @@ function checkGuess(guess) {
 }
 
 function displayGuess(guess) {
+  // cleanup methhod
   userInput.value = '';
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
