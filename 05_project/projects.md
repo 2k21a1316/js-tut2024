@@ -16,6 +16,7 @@ buttons.forEach(function (button) {
   console.log(button);
   button.addEventListener('click', function (e) {
     console.log(e);
+    // e can be anyname 
     console.log(e.target);
     // event is basically object
     if (e.target.id === 'grey') {
@@ -41,15 +42,15 @@ buttons.forEach(function (button) {
 
 ```javascript
 const form = document.querySelector('form');
-// this usecase will give you empty
+// this usecase will give you empty value becouse it is outside of the event of submit form
 // const height = parseInt(document.querySelector('#height').value)
 //form submit by get or post on url or server respectively
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-
-  const height = parseInt(document.querySelector('#height').value);
+  //preventing default event of submit button
+  const height = parseInt(document.querySelector('#height').value); //parse the value into integer
   const weight = parseInt(document.querySelector('#weight').value);
-  const results = document.querySelector('#results');
+  const results = document.querySelector('#results'); //result is one element no need to parse
 
   if (height === '' || height < 0 || isNaN(height)) {
     results.innerHTML = `Please give a valid height ${height}`;
@@ -57,10 +58,21 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `Please give a valid weight ${weight}`;
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    // tofixed to 2
     //show the result
-    results.innerHTML = `<span>${bmi}</span>`;
+    // results.innerHTML = `<span>${bmi}</span>`;
+    if (bmi <= 18.6) {
+      results.innerHTML = `You are under weight with bmi: ${bmi}`;
+    }
+    if (bmi <= 24.9 || bmi >= 18.6) {
+      results.innerHTML = `You have healthy weight with bmi: ${bmi}`;
+    }
+    if (bmi >= 24.9) {
+      results.innerHTML = `You are over weight with bmi: ${bmi}`;
+    }
   }
 });
+
 
 
 ```
