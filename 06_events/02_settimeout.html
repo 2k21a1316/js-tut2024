@@ -32,8 +32,9 @@ javascipt not enough to read file, node js does
         document.querySelector('h1').innerHTML = "best JS series"
     }
 
-    const changeMe = setTimeout(changeText, 2000)
-
+    const changeMe = setTimeout(changeText, 2000)//settimeout is not pure js function ,it actually calls api 
+// handler is also a callback ,and can be reference of the function
+//settimeout takes time to execute the function once 
     document.querySelector('#stop').addEventListener('click', function(){
         clearTimeout(changeMe)
         console.log("STOPPED")
