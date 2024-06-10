@@ -100,7 +100,7 @@ consumePromiseFive()
 //getAllUsers()
 
 // method2
-fetch('https://api.github.com/users/hiteshchoudhary')
+fetch('https://api.github.com/users/hiteshchoudhary')//return promises
 .then((response) => {
     return response.json()
 })
