@@ -198,6 +198,7 @@ function newGame() {
 # Project 5 solution
 
 ```javascript
+// project of async js
 const insert = document.getElementById('insert');
 
 window.addEventListener('keydown', (e) => {
@@ -226,6 +227,7 @@ window.addEventListener('keydown', (e) => {
 # Project 6 Solution
 
 ```javascript
+// project of async js
 //generate a random color
 
 const randomColor = function () {
@@ -239,6 +241,7 @@ const randomColor = function () {
 
 let intervalId;
 const startChangingColor = function () {
+  // check tha value null is present or not
   if (!intervalId) {
     intervalId = setInterval(changeBgColor, 1000);
   }
@@ -249,7 +252,7 @@ const startChangingColor = function () {
 };
 const stopChangingColor = function () {
   clearInterval(intervalId);
-  intervalId = null;
+  intervalId = null;//kaam hone ke baad null set kar diya and dereference kar diya
 };
 
 document.querySelector('#start').addEventListener('click', startChangingColor);
