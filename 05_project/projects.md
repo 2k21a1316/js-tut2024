@@ -198,6 +198,8 @@ function newGame() {
 # Project 5 solution
 
 ```javascript
+// js is not default async we make it async using api ,api is like settimeout and settimeinterval 
+// async is performed single thread
 // project of async js
 const insert = document.getElementById('insert');
 
